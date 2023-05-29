@@ -17,13 +17,14 @@ This is a lab experiment using Terraform that:
 
 1. Install all tools;
 2. Using an IDE such as VS Code or even any terminal, clone locally this repository with Git;
-3. Run `terraform apply --auto-approve` which will create all the following resources:
+3. Run `terraform init` to install required Terraform plugins;
+4. Run `terraform apply --auto-approve` which will create all the following resources:
     | Name                  | Version   |
     |-----------------------|-----------|
     | Kind (cluster)        | 0.19.0    |
     | Kubernetes Dashboard  | 2.7.0     |
-4. Run `kubectl proxy`
-5. Look at Terraform Output for the variable `kubernetes_dashboard_url` and Ctrl+Click on it.
+5. Run `kubectl proxy`
+6. Look at Terraform Output for the variable `kubernetes_dashboard_url` and Ctrl+Click on it.
 
 ## Terraform Docs
 
