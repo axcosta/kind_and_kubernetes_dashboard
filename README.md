@@ -1,16 +1,20 @@
 # Lab with Kind, Terraform and Kubernetes Dashboard
+
 This is a lab experiment using Terraform that:
-* creates a Kind Kubernetes cluster and
-* installs Kubernetes Dashboard (insecure mode).
-    
-## Tools 
-| Name                  | Version   |
-|-----------------------|-----------|
-| Git                   | 2.34.1    |
-| Terraform             | 1.4.5     |
-| Kubectl               | 1.27.1    |
+
+- creates a Kind Kubernetes cluster and
+- installs Kubernetes Dashboard (insecure mode).
+
+## Tools
+
+| Name      | Version   |
+|-----------|-----------|
+| Git       | 2.34.1    |
+| Terraform | 1.4.5     |
+| Kubectl   | 1.27.1    |
 
 ## Step by step
+
 1. Install all tools;
 2. Using an IDE such as VS Code or even any terminal, clone locally this repository with Git;
 3. Run `terraform apply --auto-approve` which will create all the following resources:
@@ -22,6 +26,7 @@ This is a lab experiment using Terraform that:
 5. Look at Terraform Output for the variable `kubernetes_dashboard_url` and Ctrl+Click on it.
 
 ## Terraform Docs
+
 Below is the documentation of Terraform code produced to this lab.
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
