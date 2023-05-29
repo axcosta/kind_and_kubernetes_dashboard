@@ -1,0 +1,7 @@
+extraArgs:
+  - --enable-skip-login
+  - --enable-insecure-login
+  - --system-banner="Welcome to Kubernetes"
+
+## Serve application over HTTP without TLS
+protocolHttp: true
