@@ -8,6 +8,10 @@ terraform {
       source = "hashicorp/helm"
       version = "2.9.0"
     }
+    kubernetes  = {
+      source  = "hashicorp/kubernetes"
+      version = "2.20.0"
+    }
   }
 }
 
@@ -20,5 +24,11 @@ provider "helm" {
     client_certificate      = "${kind_cluster.lab_k8s_cluster.client_certificate}"
     client_key              = "${kind_cluster.lab_k8s_cluster.client_key}"  
   }
-  
+}
+
+provider "kubernetes" {  
+  host                    = "${kind_cluster.lab_k8s_cluster.endpoint}"
+  cluster_ca_certificate  = "${kind_cluster.lab_k8s_cluster.cluster_ca_certificate}"
+  client_certificate      = "${kind_cluster.lab_k8s_cluster.client_certificate}"
+  client_key              = "${kind_cluster.lab_k8s_cluster.client_key}"
 }

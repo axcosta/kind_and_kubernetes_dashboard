@@ -8,8 +8,5 @@ resource "kind_cluster" "lab_k8s_cluster" {
         node {
             role = "control-plane"
         }
-        node {
-            role = "worker"
-        }
     }
 }
